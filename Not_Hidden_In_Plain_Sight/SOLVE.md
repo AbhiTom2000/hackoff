@@ -1,23 +1,22 @@
-# Not hidden in plain sight
+# Not Hidden In Plain Sight (150pts)
+#### Author: [Emil](https://github.com/TheSkullCrushr)
+## Challenge
+`All she said was, "There are some easter eggs hidden inside". I don't think she meant it literally.`
 
-## Challenge prompt
+## Solution
+
+We are provided with *broken_eggs.jpg.*
+
+We will perform our primary analysis of the image file by opening it in a text-editor or using the `strings` command in Linux:
 ```
-All she said was, "There are some easter eggs hidden inside". I don't think she meant it literally.
+$ strings broken_eggs.jpg
 ```
-## **Solution**
-```
-We are provided with broen_eggs.jpeg
-```
-## Attempts
-- ``` 1. Using stegsolve```
-    - ```Result : no flag . So thats a rabbit hole ```
-- ```2. Using strings```
-    - ``` We find pass.txt at end```
+We see `pass.txt` among the contents of *broken_eggs.jpg*.
 
-## Well,then confirmed just unzip the image !
+Embedding the code of a zip file in an image is one of the most easy and primitive methods of steganography, so we'll start with that.
 
-``` unzip unzip broken_eggs.jpg```
+Rename *broken_eggs.__jpg__* to _broken_eggs.**zip**_.
 
-We get a pass.txt and that is our flag
-
-## flag: hackoff{just_an0ther_easter_egg}
+Now upon opening the zip file using any archiver/compression tool, we can find that it actually was a **zip** file, and *pass.txt* is present inside the archive.
+The flag is inside *pass.txt*.
+### flag : hackoff{just_an0ther_easter_egg}

@@ -1,26 +1,21 @@
-# Babbabbaa
+# Babbabbaa (100pts)
+#### Author: [Emil](https://github.com/TheSkullCrushr)
+## Challenge
+`
+Seriously, what? I can't make head or tails of this!`  
+`Do you think it's some kind of secret language? Or maybe code for something?  
+`
+## Solution
+Bacon's cipher or the Baconian cipher is used in this challenge.
+To encode a message, each letter of the plaintext is replaced by a group of five of the letters 'A' or 'B'. This replacement is a 5-bit binary encoding and is done according to the alphabet of the Baconian cipher.
 
-## Challenge prompt
-```
-Seriously, what? I can't make head or tails of this! Do you think it's some kind of secret language? Or maybe code for something?
-```
+On decoding with an online decoder we get the flag.
 
-## **Solution**
-```
-Reading the babu.txt
+##### How to detect bacon's cipher ?
+Generally there would be two characters in the text. Each word would have a length of five character.
+In this challenge, A is used to denote 0 and B to denote 1 in binary.
 
-baaab abbab ababb baabb aaaba aabbb aabab abbab baaaa baaab baaba baaaa abbab abbaa aabba aabaa abbaa aaaba baaaa babba abbba baaba abaaa abbab abbaa
+##### Reference
+[Read more about the Bacon Cipher on Wikipedia.](https://en.wikipedia.org/wiki/Bacon%27s_cipher)
 
-This is a Bacon's cipher or baconian cipher
-```
-### How to detect bacon's cipher ?
-```
-Generally there would be two characters in the text. Each word would have a length of five character
-```
-
-### Our solution
-```
-On decoding with an online decoder we get the flag
-```
-
-## flag : hackoff{somuchforstrongencryption}
+### flag : hackoff{somuchforstrongencryption}

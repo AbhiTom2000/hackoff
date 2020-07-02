@@ -1,10 +1,8 @@
 # Welcome To HackOff (50pts)
+#### Author: [Emil](https://github.com/TheSkullCrushr)
+## Challenge
+`Introduction to Hack0FF. Download the file to continue.`
 
-Well this is a easy challenge for warm up
-```
-1. Download the file 
-
-2. cat WelcomeToHackOFF.txt | grep hackoff{.*}  -o
-
-
-## flag: hackoff{this_is_my_first_flag}
+## Solution
+The flag is obtained after reading the contest description in the given file.
+### flag: hackoff{this_is_my_first_flag}
